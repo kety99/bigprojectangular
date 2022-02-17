@@ -1,14 +1,13 @@
 export class BaseEntity{
-  private _id: number;
+  private _id: number | undefined;
 
 
-  constructor(id: number) {
-    this._id = id;
+  constructor() {
   }
 
 
   get id(): number {
-    return this._id;
+    return <number>this._id;
   }
 
   set id(value: number) {
